@@ -1,0 +1,8 @@
+@import "./styles/normalize.css";
+
+
+
+.App{
+    background-color: #999;
+    color:#333;
+}
