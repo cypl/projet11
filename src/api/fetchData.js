@@ -9,7 +9,7 @@ function fetchDatas() {
   })
 }
 
-export const requestLodging = () => {
+function requestLodging() {
   try {
     return fetchDatas()
   } catch (error) {
@@ -19,3 +19,5 @@ export const requestLodging = () => {
     )
   }
 }
+
+export default requestLodging
