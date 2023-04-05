@@ -1,0 +1,29 @@
+:root {
+  --kasa: #ff6060;
+  --soft: #f6f6f6;
+  --dark: #000000;
+  --light: #ffffff;
+}
+html {
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  background-color: var(--dark);
+  color: var(--kasa);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+  margin: 0;
+}

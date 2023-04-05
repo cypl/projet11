@@ -1,8 +1,7 @@
-@import "./styles/normalize.css";
+@import './styles/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import './styles/base.css';
 
-
-
-.App{
-    background-color: #999;
-    color:#333;
+.App {
+  color: var(--kasa);
 }
