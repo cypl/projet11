@@ -1,5 +1,11 @@
+import Header from '../components/Header'
+
 function Lodging() {
-  return <p>Lodging</p>
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
 
 export default Lodging

@@ -16,6 +16,10 @@ body {
   background-color: var(--dark);
   color: var(--kasa);
 }
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -26,4 +30,17 @@ ul,
 li,
 p {
   margin: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+figure {
+  margin: 0;
+}
+
+.content_width {
+  max-width: 1100px;
+  width: 85%;
+  margin: auto;
 }

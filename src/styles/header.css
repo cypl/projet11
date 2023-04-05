@@ -1,0 +1,40 @@
+header {
+  background-color: var(--light);
+}
+.content_header {
+  height: 140px;
+  border: 2px solid var(--soft);
+  position: relative;
+}
+.logo_header {
+  height: 60px;
+  position: absolute;
+  top: 40px;
+}
+.logo_header img {
+  height: 60px;
+  width: auto;
+}
+.nav_header {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  font-size: 20px;
+  display: flex;
+}
+.nav_header_item {
+  padding-left: 20px;
+}
+.nav_header_item a {
+  color: var(--kasa);
+  text-decoration: none;
+  padding: 3px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.1s border-color ease-in-out;
+}
+.nav_header_item a:hover,
+.nav_header_item a.active {
+  border-bottom: 2px solid var(--kasa);
+  transition: 0.1s border-color ease-in-out;
+}
