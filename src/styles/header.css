@@ -11,7 +11,7 @@ header {
   top: 40px;
 }
 .logo_header img {
-  height: 60px;
+  height: 100%;
   width: auto;
 }
 .nav_header {
@@ -36,4 +36,13 @@ header {
 .nav_header_item a.active {
   border-bottom: 2px solid var(--kasa);
   transition: 0.1s border-color ease-in-out;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .logo_header {
+    height: 40px;
+    top: 50px;
+  }
+  .nav_header {
+    font-size: 17px;
+  }
 }

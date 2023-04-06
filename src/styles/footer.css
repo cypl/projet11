@@ -12,3 +12,9 @@
   font-size: 20px;
   margin-top: 30px;
 }
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .footer_copyright {
+    font-size: 17px;
+    margin-top: 25px;
+  }
+}

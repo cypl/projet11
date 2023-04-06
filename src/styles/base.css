@@ -41,6 +41,6 @@ figure {
 
 .content_width {
   max-width: 1200px;
-  width: 85%;
+  width: calc(100% - 40px);
   margin: auto;
 }
