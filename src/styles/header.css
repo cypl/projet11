@@ -3,7 +3,6 @@ header {
 }
 .content_header {
   height: 140px;
-  border: 2px solid var(--soft);
   position: relative;
 }
 .logo_header {

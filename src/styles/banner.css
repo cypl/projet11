@@ -13,6 +13,7 @@
   max-width: calc(100% - 60px);
   margin: auto;
   font-size: 42px;
+  line-height: 1.2;
   font-weight: 500;
   color: var(--light);
   text-align: center;
