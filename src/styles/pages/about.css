@@ -1,0 +1,14 @@
+.section_about {
+  background-color: var(--light);
+  padding-bottom: 40px;
+}
+.content_about {
+  width: 80%;
+  margin: auto;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .content_about {
+    width: 100%;
+    margin: auto;
+  }
+}
