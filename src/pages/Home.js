@@ -8,7 +8,7 @@ function Home() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('./data/logements.json')
+    fetch('../data/logements.json')
       .then((r) => r.json())
       .then((d) => {
         setData(d)
