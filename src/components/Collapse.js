@@ -19,8 +19,8 @@ function Collapse({ title, contentSingle, contentList }) {
         {/* Dans le cas où on affiche une liste d'éléments */}
         {isContentList ? (
           <ul>
-            {contentList.map((item, index) => (
-              <li key={index}>{item}</li>
+            {contentList.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
         ) : (
