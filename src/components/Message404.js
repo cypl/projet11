@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 function Message404() {
   return (
-    <section className="section_message404">
+    <section className="section_base">
       <div className="content_width content_message404">
         <h1 className="title_message404">404</h1>
         <p className="txt_message404">

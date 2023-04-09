@@ -28,7 +28,15 @@ function Lodging() {
   return (
     <div>
       <Header />
-      {data === undefined ? <Message404 /> : <p>{data.title}</p>}
+      {data === undefined ? (
+        <Message404 />
+      ) : (
+        <section className="section_base">
+          <div className="content_width content_lodging">
+            <p>{data.title}</p>
+          </div>
+        </section>
+      )}
       <Footer />
     </div>
   )

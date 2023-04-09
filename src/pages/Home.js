@@ -22,7 +22,7 @@ function Home() {
         title="Chez vous, partout et ailleurs"
         srcImage="/assets/banner_home.jpg"
       />
-      <section className="section_cards">
+      <section className="section_base">
         <div className="content_width content_cards">
           {data.map((lodging) => (
             <Card

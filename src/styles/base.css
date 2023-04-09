@@ -36,7 +36,10 @@ ul {
 figure {
   margin: 0;
 }
-
+.section_base {
+  background-color: var(--light);
+  padding-bottom: 40px;
+}
 .content_width {
   max-width: 1200px;
   width: calc(100% - 40px);

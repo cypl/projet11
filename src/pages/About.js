@@ -19,7 +19,7 @@ function About() {
     <div>
       <Header />
       <Banner srcImage="/assets/banner_about.jpg" />
-      <section className="section_about">
+      <section className="section_base">
         <div className="content_width">
           <div className="content_about">
             {data.map((aboutItem) => (

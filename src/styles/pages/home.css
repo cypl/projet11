@@ -1,7 +1,3 @@
-.section_cards {
-  background-color: var(--light);
-  padding-bottom: 40px;
-}
 .content_cards {
   background-color: var(--soft);
   border-radius: 15px;
