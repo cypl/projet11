@@ -15,6 +15,10 @@ function Home() {
       })
   }, [])
 
+  useEffect(() => {
+    document.title = 'KASA - Location de logement'
+  }, [])
+
   return (
     <div>
       <Header />

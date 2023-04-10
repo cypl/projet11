@@ -1,5 +1,14 @@
 .head_lodging {
   padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.head_lodging__left {
+  outline: 1px solid greenyellow;
+}
+.head_lodging__right {
+  outline: 1px solid red;
 }
 .head_lodging__title {
   font-weight: 400;

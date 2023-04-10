@@ -7,6 +7,8 @@
 @import './styles/components/card.css';
 @import './styles/components/collapse.css';
 @import './styles/components/message404.css';
+@import './styles/components/taglist.css';
+@import './styles/components/owner.css';
 @import './styles/pages/about.css';
 @import './styles/pages/home.css';
 @import './styles/pages/lodging.css';

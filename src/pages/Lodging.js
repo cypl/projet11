@@ -4,12 +4,13 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Message404 from '../components/Message404'
 import Collapse from '../components/Collapse'
-// import TagList from '../components/TagList'
+import TagList from '../components/TagList'
+import Owner from '../components/Owner'
 
 function Lodging() {
   const { id } = useParams()
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState()
 
   useEffect(() => {
     async function fetchData() {
@@ -25,7 +26,7 @@ function Lodging() {
       }
     }
     fetchData()
-  }, [data, id])
+  }, [id])
 
   return (
     <div>
@@ -36,20 +37,26 @@ function Lodging() {
         <section className="section_base">
           <div className="content_width content_lodging">
             <header className="head_lodging">
-              <h1 className="head_lodging__title">{data.title}</h1>
-              <p className="head_lodging__location">{data.location}</p>
-              {/* <TagList taglist={data.tags} /> */}
+              <div className="head_lodging__left">
+                <h1 className="head_lodging__title">{data.title}</h1>
+                <p className="head_lodging__location">{data.location}</p>
+                <TagList taglist={data.tags} />
+              </div>
+              <div className="head_lodging__right">
+                <Owner name={data.host.name} picture={data.host.picture} />
+                <div className="rating">{data.rating}</div>
+              </div>
             </header>
             <div className="infos_lodging">
-              <article>
+              <div>
                 <Collapse
                   title="Description"
                   contentSingle={data.description}
                 />
-              </article>
-              <article>
+              </div>
+              <div>
                 <Collapse title="Équipements" contentList={data.equipments} />
-              </article>
+              </div>
             </div>
           </div>
         </section>
