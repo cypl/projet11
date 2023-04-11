@@ -5,10 +5,14 @@
   justify-content: space-between;
 }
 .head_lodging__left {
-  outline: 1px solid greenyellow;
+  outline: 1px solid rgb(83, 83, 254);
+  width: calc(100% - 150px);
 }
 .head_lodging__right {
-  outline: 1px solid red;
+  outline: 1px solid greenyellow;
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
 }
 .head_lodging__title {
   font-weight: 400;

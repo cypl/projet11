@@ -6,6 +6,7 @@ import Message404 from '../components/Message404'
 import Collapse from '../components/Collapse'
 import TagList from '../components/TagList'
 import Owner from '../components/Owner'
+import Rating from '../components/Rating'
 
 function Lodging() {
   const { id } = useParams()
@@ -44,7 +45,7 @@ function Lodging() {
               </div>
               <div className="head_lodging__right">
                 <Owner name={data.host.name} picture={data.host.picture} />
-                <div className="rating">{data.rating}</div>
+                <Rating rating={data.rating} />
               </div>
             </header>
             <div className="infos_lodging">
