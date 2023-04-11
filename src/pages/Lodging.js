@@ -19,6 +19,7 @@ function Lodging() {
       try {
         const response = await fetch('../data/logements.json')
         const dataLodging = await response.json()
+        // ajouter un setTimeOut
         setData(dataLodging.find((item) => item.id === id))
       } catch (error) {
         console.log(error)

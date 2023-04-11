@@ -3,17 +3,20 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
+import { useFetchJson } from '../hooks/useFetchJson'
 
 function Home() {
   const [data, setData] = useState([])
 
-  useEffect(() => {
-    fetch('../data/logements.json')
-      .then((r) => r.json())
-      .then((d) => {
-        setData(d)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('../data/logements.json')
+  //     .then((r) => r.json())
+  //     .then((d) => {
+  //       setData(d)
+  //     })
+  // }, [])
+
+  useFetchJson('../data/logements.json', setData)
 
   useEffect(() => {
     document.title = 'KASA - Location de logement'
