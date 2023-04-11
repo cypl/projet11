@@ -7,15 +7,6 @@ import { useFetchJson } from '../hooks/useFetchJson'
 
 function Home() {
   const [data, setData] = useState([])
-
-  // useEffect(() => {
-  //   fetch('../data/logements.json')
-  //     .then((r) => r.json())
-  //     .then((d) => {
-  //       setData(d)
-  //     })
-  // }, [])
-
   useFetchJson('../data/logements.json', setData)
 
   useEffect(() => {
