@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
+import { useFetchJson } from '../hooks/useFetchJson'
 
 function About() {
   const [data, setData] = useState([])
-
-  useEffect(() => {
-    fetch('./data/about.json')
-      .then((r) => r.json())
-      .then((d) => {
-        setData(d)
-      })
-  }, [])
+  useFetchJson('../data/about.json', setData)
 
   return (
     <div>
@@ -26,7 +20,7 @@ function About() {
               <Collapse
                 key={aboutItem.id}
                 title={aboutItem.title}
-                contentSingle={aboutItem.content}
+                content={aboutItem.content}
               />
             ))}
           </div>

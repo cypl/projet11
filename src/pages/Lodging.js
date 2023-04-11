@@ -51,13 +51,10 @@ function Lodging() {
             </header>
             <div className="infos_lodging">
               <div>
-                <Collapse
-                  title="Description"
-                  contentSingle={data.description}
-                />
+                <Collapse title="Description" content={data.description} />
               </div>
               <div>
-                <Collapse title="Équipements" contentList={data.equipments} />
+                <Collapse title="Équipements" content={data.equipments} />
               </div>
             </div>
           </div>

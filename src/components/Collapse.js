@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import ContentParagraph from './ContentParagraph'
+import ContentList from './ContentList'
 
-function Collapse({ title, contentSingle, contentList }) {
+function Collapse({ title, content }) {
   let [open, setOpen] = useState(false)
   function openCollapse() {
     open ? setOpen(false) : setOpen(true)
   }
-  const isContentSingle = contentSingle
-  const isContentList = contentList
+  // Vérification du type de content
+  const isContentParagraph = typeof content === 'string'
+  const isContentList = content instanceof Array
 
   return (
     <article className={open ? 'collapse active' : 'collapse'}>
@@ -15,17 +18,9 @@ function Collapse({ title, contentSingle, contentList }) {
       </div>
       <div className="collapse_content">
         {/* Dans le cas où on affiche un seul paragraphe */}
-        {isContentSingle ? <p>{contentSingle}</p> : ''}
+        {isContentParagraph ? <ContentParagraph content={content} /> : ''}
         {/* Dans le cas où on affiche une liste d'éléments */}
-        {isContentList ? (
-          <ul>
-            {contentList.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          ''
-        )}
+        {isContentList ? <ContentList content={content} /> : ''}
       </div>
     </article>
   )
