@@ -1,0 +1,25 @@
+.loader {
+  width: 30px;
+  height: 30px;
+  background-image: url('http://localhost:3000/assets/loader.png');
+  background-size: cover;
+  position: relative;
+  animation-duration: 0.8s; /* durée de l'animation */
+  animation-timing-function: linear; /* type de easing */
+  animation-delay: 0s; /* durée avant le déclenchement */
+  animation-iteration-count: infinite; /* nombre de fois où l'animation est jouée */
+  animation-name: loaderRotate; /* appel keyframes */
+  animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+}
+.loader.big {
+  width: 80px;
+  height: 80px;
+}
+@keyframes loaderRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

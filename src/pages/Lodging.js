@@ -7,24 +7,31 @@ import Collapse from '../components/Collapse'
 import TagList from '../components/TagList'
 import Owner from '../components/Owner'
 import Rating from '../components/Rating'
+import LoaderSection from '../components/LoaderSection'
 
 function Lodging() {
   const { id } = useParams()
 
   const [data, setData] = useState()
+  const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
-      // ajouter un state loading
+      setDataLoading(true) // ajouter le loader
       try {
         const response = await fetch('../data/logements.json')
         const dataLodging = await response.json()
         // ajouter un setTimeOut
-        setData(dataLodging.find((item) => item.id === id))
+        setTimeout(() => {
+          setData(dataLodging.find((item) => item.id === id))
+        }, 1000)
+        setTimeout(() => {
+          setDataLoading(false) // retirer le loader
+        }, 1001)
       } catch (error) {
         console.log(error)
       } finally {
-        // retirer le state loading
+        // setDataLoading(false) // retirer le loader
       }
     }
     fetchData()
@@ -33,9 +40,11 @@ function Lodging() {
   return (
     <div>
       <Header />
-      {data === undefined ? (
-        <Message404 />
-      ) : (
+      {isDataLoading && <LoaderSection />}
+
+      {data === undefined && !isDataLoading && <Message404 />}
+
+      {data && (
         <section className="section_base">
           <div className="content_width content_lodging">
             <header className="head_lodging">
@@ -60,6 +69,7 @@ function Lodging() {
           </div>
         </section>
       )}
+
       <Footer />
     </div>
   )
