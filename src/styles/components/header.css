@@ -43,6 +43,7 @@ header {
     top: 50px;
   }
   .nav_header {
-    font-size: 17px;
+    font-size: 15px;
+    text-transform: uppercase;
   }
 }
