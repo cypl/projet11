@@ -1,0 +1,17 @@
+.gallery_wrapper {
+  padding-bottom: 40px;
+}
+.gallery {
+  height: 400px;
+  background-color: var(--soft);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.gallery_counter {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: var(--light);
+}

@@ -8,6 +8,7 @@ import TagList from '../components/TagList'
 import Owner from '../components/Owner'
 import Rating from '../components/Rating'
 import LoaderSection from '../components/LoaderSection'
+import Gallery from '../components/Gallery'
 
 function Lodging() {
   const { id } = useParams()
@@ -47,6 +48,7 @@ function Lodging() {
       {data && (
         <section className="section_base">
           <div className="content_width content_lodging">
+            <Gallery content={data.pictures} />
             <header className="head_lodging">
               <div className="head_lodging__left">
                 <h1 className="head_lodging__title">{data.title}</h1>
