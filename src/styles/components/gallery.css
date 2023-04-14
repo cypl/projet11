@@ -8,6 +8,43 @@
   position: relative;
   overflow: hidden;
 }
+.gallery_btn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  cursor: pointer;
+}
+.gallery_btn.prev {
+  left: 0;
+}
+.gallery_btn.next {
+  right: 0;
+}
+.gallery_btn_svg {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  fill: #fff;
+}
+.gallery_btn.prev .gallery_btn_svg {
+  transform: rotate(90deg);
+}
+.gallery_btn.next .gallery_btn_svg {
+  transform: rotate(-90deg);
+}
+.gallery_slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.gallery_slide img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 .gallery_counter {
   position: absolute;
   bottom: 20px;
