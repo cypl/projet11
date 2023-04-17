@@ -9,7 +9,7 @@ import ScrollToTop from './hooks/ScrollToTop'
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop></ScrollToTop>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
