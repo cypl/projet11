@@ -14,7 +14,7 @@ function Lodging() {
   const { id } = useParams()
 
   const [data, setData] = useState()
-  const [isDataLoading, setDataLoading] = useState(false)
+  const [isDataLoading, setDataLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
@@ -26,13 +26,12 @@ function Lodging() {
         setTimeout(() => {
           setData(dataLodging.find((item) => item.id === id))
         }, 1000)
-        setTimeout(() => {
-          setDataLoading(false) // retirer le loader
-        }, 1001)
       } catch (error) {
         console.log(error)
       } finally {
-        // setDataLoading(false) // retirer le loader
+        setTimeout(() => {
+          setDataLoading(false) // retirer le loader
+        }, 1000)
       }
     }
     fetchData()
