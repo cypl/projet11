@@ -4,10 +4,12 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Lodging from './pages/Lodging'
 import Error from './pages/Error'
+import ScrollToTop from './hooks/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop></ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
