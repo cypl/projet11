@@ -9,12 +9,15 @@ import Owner from '../components/Owner'
 import Rating from '../components/Rating'
 import LoaderSection from '../components/LoaderSection'
 import Gallery from '../components/Gallery'
+import NavLodging from '../components/NavLodging'
 
 function Lodging() {
   const { id } = useParams()
 
   const [data, setData] = useState()
   const [isDataLoading, setDataLoading] = useState(true)
+  const [dataNext, setDataNext] = useState() // correspond juste à un ID
+  const [dataPrev, setDataPrev] = useState() // correspond juste à un ID
 
   useEffect(() => {
     async function fetchData() {
@@ -25,6 +28,22 @@ function Lodging() {
         // ajouter un setTimeOut
         setTimeout(() => {
           setData(dataLodging.find((item) => item.id === id))
+
+          // Données pour la navigation d'un logement à l'autre
+          const lodgingIndex = dataLodging.indexOf(
+            dataLodging.find((item) => item.id === id)
+          )
+          const totalLodging = dataLodging.length
+
+          // Si on arrive au bout de la liste
+          lodgingIndex === totalLodging - 1
+            ? setDataNext(dataLodging[0].id) // on revient au début
+            : setDataNext(dataLodging[lodgingIndex + 1].id) // sinon on passe à la suivante
+
+          // Si on arrive au début de la liste
+          lodgingIndex === 0
+            ? setDataPrev(dataLodging[totalLodging - 1].id) // on va directement à la fin
+            : setDataPrev(dataLodging[lodgingIndex - 1].id) // sinon on passe à la précédente
         }, 1000)
       } catch (error) {
         console.log(error)
@@ -68,6 +87,7 @@ function Lodging() {
               </div>
             </div>
           </div>
+          <NavLodging dataPrev={dataPrev} dataNext={dataNext} />
         </section>
       )}
 
