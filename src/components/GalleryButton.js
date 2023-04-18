@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function GalleryButton({ action, target }) {
   return (
     <div
@@ -14,4 +16,10 @@ function GalleryButton({ action, target }) {
     </div>
   )
 }
+
+GalleryButton.propTypes = {
+  action: PropTypes.func,
+  target: PropTypes.string,
+}
+
 export default GalleryButton

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Owner({ name, picture }) {
   return (
     <div className="owner">
@@ -7,6 +9,11 @@ function Owner({ name, picture }) {
       </figure>
     </div>
   )
+}
+
+Owner.propTypes = {
+  name: PropTypes.string,
+  picture: PropTypes.string,
 }
 
 export default Owner

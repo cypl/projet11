@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function GallerySlide({ slide }) {
   /**
    * Fonction qui permet de récupérer le nom du fichier dans l'URL
@@ -19,4 +21,9 @@ function GallerySlide({ slide }) {
     </figure>
   )
 }
+
+GallerySlide.propTypes = {
+  slide: PropTypes.string,
+}
+
 export default GallerySlide

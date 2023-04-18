@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Banner({ title, srcImage }) {
   const titleExist = title
   const srcImageExist = srcImage
@@ -15,6 +17,11 @@ function Banner({ title, srcImage }) {
       </div>
     </section>
   )
+}
+
+Banner.propTypes = {
+  title: PropTypes.string,
+  srcImg: PropTypes.string,
 }
 
 export default Banner

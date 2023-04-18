@@ -2,6 +2,7 @@ import { useState } from 'react'
 import GalleryCounter from './GalleryCounter'
 import GallerySlide from './GallerySlide'
 import GalleryButton from './GalleryButton'
+import PropTypes from 'prop-types'
 
 function Gallery({ content }) {
   const [slideIndex, setSlideIndex] = useState(0) // la galerie commence sur la première slide du tableau
@@ -37,6 +38,10 @@ function Gallery({ content }) {
       </div>
     </div>
   )
+}
+
+Gallery.propTypes = {
+  content: PropTypes.array,
 }
 
 export default Gallery

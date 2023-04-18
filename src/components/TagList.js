@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function TagList({ taglist }) {
   return (
     <ul className="tag_list">
@@ -6,6 +8,10 @@ function TagList({ taglist }) {
       ))}
     </ul>
   )
+}
+
+TagList.propTypes = {
+  taglist: PropTypes.array,
 }
 
 export default TagList

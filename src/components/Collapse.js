@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ContentParagraph from './ContentParagraph'
 import ContentList from './ContentList'
+import PropTypes from 'prop-types'
 
 function Collapse({ title, content }) {
   let [open, setOpen] = useState(false)
@@ -24,6 +25,11 @@ function Collapse({ title, content }) {
       </div>
     </article>
   )
+}
+
+Collapse.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 }
 
 export default Collapse

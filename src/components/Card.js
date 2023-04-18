@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function Card({ id, title, srcImg }) {
   return (
@@ -11,6 +12,12 @@ function Card({ id, title, srcImg }) {
       </NavLink>
     </article>
   )
+}
+
+Card.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  srcImg: PropTypes.string,
 }
 
 export default Card

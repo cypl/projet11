@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function ContentList({ content }) {
   return (
     <ul>
@@ -6,6 +8,10 @@ function ContentList({ content }) {
       ))}
     </ul>
   )
+}
+
+ContentList.propTypes = {
+  content: PropTypes.array,
 }
 
 export default ContentList

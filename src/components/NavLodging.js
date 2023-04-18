@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function NavLodging({ dataPrev, dataNext }) {
   return (
@@ -27,6 +28,11 @@ function NavLodging({ dataPrev, dataNext }) {
       </NavLink>
     </p>
   )
+}
+
+NavLodging.propTypes = {
+  dataPrev: PropTypes.number,
+  dataNext: PropTypes.number,
 }
 
 export default NavLodging

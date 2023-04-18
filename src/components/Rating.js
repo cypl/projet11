@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Rating({ rating }) {
   const allStars = [1, 2, 3, 4, 5]
   const note = parseInt(rating)
@@ -16,6 +18,10 @@ function Rating({ rating }) {
       ))}
     </div>
   )
+}
+
+Rating.propTypes = {
+  rating: PropTypes.number,
 }
 
 export default Rating
