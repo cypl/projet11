@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="/logements/:id" element={<Lodging />} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

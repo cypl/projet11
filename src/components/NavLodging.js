@@ -31,8 +31,8 @@ function NavLodging({ dataPrev, dataNext }) {
 }
 
 NavLodging.propTypes = {
-  dataPrev: PropTypes.number,
-  dataNext: PropTypes.number,
+  dataPrev: PropTypes.string,
+  dataNext: PropTypes.string,
 }
 
 export default NavLodging
