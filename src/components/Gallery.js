@@ -31,7 +31,7 @@ function Gallery({ content }) {
         {!isOneImage && (
           <GalleryButton action={() => nextSlide(slideIndex)} target="next" />
         )}
-        {galleryLength > 0 && (
+        {!isOneImage && (
           <GalleryCounter index={slideIndex + 1} total={galleryLength} />
         )}
       </div>
