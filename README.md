@@ -10,7 +10,7 @@ Dans le terminal, tapez :
 yarn install
 ```
 
-#### Puis, lancer le mode dev :
+#### Puis, lancez le mode dev :
 
 Dans le terminal, tapez :
 
