@@ -1,7 +1,7 @@
 .loader {
   width: 30px;
   height: 30px;
-  background-image: url('http://localhost:3000/assets/loader.png');
+  background-image: url('/public/assets/loader.png');
   background-size: cover;
   position: relative;
   animation-duration: 0.8s; /* durée de l'animation */
