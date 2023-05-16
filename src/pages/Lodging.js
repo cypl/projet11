@@ -50,9 +50,7 @@ function Lodging() {
           setDataLoading(false)
           setData(undefined)
         } finally {
-          setTimeout(() => {
-            setDataLoading(false) // retirer le loader
-          }, 1000)
+          setDataLoading(false) // retirer le loader
         }
       }, 1000)
     }
