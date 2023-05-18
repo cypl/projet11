@@ -21,8 +21,8 @@ function Lodging() {
 
   useEffect(() => {
     async function fetchData() {
-      setDataLoading(true) // ajouter le loader
-      // ajouter un setTimeOut
+      setDataLoading(true) // le state isDataLoading permet d'ajouter le loader durant le fetch des données
+      // on simule une durée pour le fetch grâce à setTimeOut, pour laisser le temps au loader de s'afficher
       setTimeout(async () => {
         try {
           const response = await fetch('../data/logements.json')
@@ -46,7 +46,7 @@ function Lodging() {
             ? setDataPrev(dataLodging[totalLodging - 1].id) // on va directement à la fin
             : setDataPrev(dataLodging[lodgingIndex - 1].id) // sinon on passe à la précédente
         } catch (error) {
-          // console.log(error)
+          console.log(error)
           setDataLoading(false)
           setData(undefined)
         } finally {
