@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Lodging from './pages/Lodging'
 import Error from './pages/Error'
-import ScrollToTop from './hooks/ScrollToTop'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
